@@ -55,7 +55,15 @@ while True:
     # Display the score
     print(f"\nScore: You {player_wins} - Computer {computer_wins}")
     
-    # Ask if player wants to play again
+    # Check if either player reaches a score of 3
+    if player_wins == 3:
+        print("\nCongratulations! You reached 3 wins. Game Over!")
+        break
+    elif computer_wins == 3:
+        print("\nThe computer reached 3 wins. Game Over!")
+        break
+    
+    # Ask if player wants to continue the game after each round
     repeat = input("\nPlay again? (yes/no): ").lower()
     
     if repeat != "yes":
